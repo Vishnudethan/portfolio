@@ -1,0 +1,70 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+}
+
+header .nav-link {
+  color: white !important;
+}
+
+header .nav-link:hover {
+  color: #ffe600 !important;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border: 6px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.skill-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: #06b6d4;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #06b6d4;
+}
+/* Full-width gradient header with always-visible text */
+.portfolio-header {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+}
+
+.portfolio-header h1 {
+  color: white; /* Ensure visibility */
+}
+
+.portfolio-header .nav-link {
+  color: white !important;
+}
+
+.portfolio-header .nav-link:hover {
+  color: #ffea00 !important;
+}
+

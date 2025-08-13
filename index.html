@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Vishnu Dethan M V - Web Developer" />
+  <title>Vishnu Dethan M V | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+
+
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+     .projects-section {
+      background-color: white;
+    }
+    
+    /* Project Card Styles */
+.project-card {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-body {
+  padding: 30px;
+}
+
+.project-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+/* Links Styling */
+.project-links {
+  margin-top: 20px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  padding: 8px 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.project-links a i {
+  margin-right: 8px;
+}
+
+/* Tech Badges */
+.tech-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Content Styling */
+.project-description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-features, 
+.project-characteristics {
+  margin-bottom: 20px;
+}
+
+.project-features li,
+.project-characteristics li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.project-features li:before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.project-characteristics li:before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+    .portfolio-header {
+      background-color: var(--secondary-color);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .profile-img {
+  
+  object-fit: cover; /* Ensures image fills space without distortion */
+  border: 4px solid white; /* Clean white border */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important; /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+}
+    
+    .skill-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    section {
+      padding: 80px 0;
+    }
+    
+    #contact {
+      background-color: var(--light-color);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #2980b9;
+      border-color: #2980b9;
+      transform: translateY(-2px);
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+    }
+    
+    .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px !important;
+}
+
+.social-icon {
+  color: var(--secondary-color); /* Or use #2c3e50 for dark color */
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  color: var(--primary-color); /* Or use #3498db for blue */
+}
+
+.social-icon i {
+  font-size: 1.5rem; /* Already using fa-2x but this adds extra control */
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="portfolio-header py-4 sticky-top shadow">
+    <div class="container text-center">
+      <h1 class="fw-bold" data-aos="fade-down">Vishnu Dethan M V</h1>
+      <p class="text-white-50 mb-0" data-aos="fade-down" data-aos-delay="100">Web Developer</p>
+      <nav>
+        <ul class="nav justify-content-center mt-3" data-aos="fade-up">
+          <li class="nav-item"><a href="#about" class="nav-link text-white fw-semibold">About Me</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link text-white fw-semibold">Skills</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link text-white fw-semibold">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-aos="fade-up">About Me</h2>
+      <img src="profilepic.jpg" alt="Vishnu Dethan M V" 
+     class="profile-img img-fluid rounded-circle shadow-lg mb-4" 
+     style="width: 450px; height: 450px; object-fit: cover; border: 4px solid white;"
+     data-aos="zoom-in">
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        Hi, I'm <strong>Vishnu Dethan M V</strong>, a passionate web developer with experience in both front-end and back-end technologies.
+      </p>
+      <p class="max-width-700 mx-auto" data-aos="fade-up" data-aos-delay="300">
+        I specialize in creating responsive, user-friendly websites and applications using modern web technologies. With a strong foundation in the Java and JavaScript ecosystems, I build efficient, scalable, and maintainable solutions that meet both user needs and business goals. My expertise spans front-end development with frameworks like React and Bootstrap, as well as back-end development using Spring Boot and RESTful APIs.
+
+I am passionate about crafting clean, optimized code and implementing best practices for performance, accessibility, and security. I enjoy turning complex requirements into intuitive, visually appealing interfaces. I believe in continuous learning and actively keep myself updated with emerging tools and trends in the tech world.
+
+I am currently seeking opportunities to kickstart my career in the IT field, where I can collaborate with innovative teams, contribute to impactful projects, and grow into a well-rounded software professional. My goal is to not only deliver functional solutions but also create experiences that leave a lasting impression on users.
+
+
+      </p>
+      <div class="alert alert-info mt-4">
+            <p class="mb-0">
+              <i class="fas fa-certificate text-primary me-2"></i>
+              Recently completed a <strong>Full Stack Java Developer Internship(Oct 2024 -July 2025)</strong> at Kompetenzen Technologies.
+            </p>
+          </div>
+    </div>
+    
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Skills</h2>
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="100"><div class="skill-card">HTML</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="200"><div class="skill-card">CSS</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="300"><div class="skill-card">Bootstrap</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="400"><div class="skill-card">JavaScript</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="100"><div class="skill-card">React</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="200"><div class="skill-card">Java</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="300"><div class="skill-card">Hibernate</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="400"><div class="skill-card">Spring Boot</div></div>
+        <div class="col-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="100"><div class="skill-card">MySQL</div></div>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  
+<section id="projects" class="py-5 projects-section">
+  <div class="container-fluid px-5" style="max-width: 2000px;">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">My Projects</h2>
+
+    <!-- Single Full-Stack Project -->
+    <div class="row align-items-center g-5" data-aos="fade-up">
+      <!-- Project Image -->
+      <div class="col-lg-6">
+        <img 
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80" 
+          alt="Library Management System" 
+          class="img-fluid rounded shadow-lg"
+        >
+      </div>
+
+      <!-- Project Details -->
+      <div class="col-lg-6">
+        <h3 class="fw-bold">Library Management System</h3>
+        <p class="project-description mt-3">
+          A lightweight online library application that allows users to:
+        </p>
+
+        <div class="project-features">
+          <h5>Key Features:</h5>
+          <ul>
+            <li>Browse all available books in the collection</li>
+            <li>Add new books to the library database</li>
+            <li>Remove books they no longer want in the collection</li>
+            <li>View detailed information about each book</li>
+          </ul>
+        </div>
+
+        <p class="project-description mt-3">
+          The application features a clean, intuitive interface built with React for the frontend 
+          and a Spring Boot backend with REST API endpoints for data operations. 
+          All book data is persisted in a MongoDB database.
+        </p>
+
+        <div class="project-characteristics mt-3">
+          <h5>Key Characteristics:</h5>
+          <ul>
+            <li>No authentication required (open access)</li>
+            <li>Simple CRUD operations (Create, Read, Delete)</li>
+            <li>Responsive design works on all devices</li>
+            <li>Minimalist approach focusing on core functionality</li>
+          </ul>
+        </div>
+
+        <div class="mb-4 mt-4">
+          <h5>Technologies Used:</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-primary">React</span>
+            <span class="badge bg-primary">Spring Boot</span>
+            <span class="badge bg-primary">Hibernate</span>
+            <span class="badge bg-primary">MongoDB Atlas</span>
+            <span class="badge bg-primary">Bootstrap</span>
+            <span class="badge bg-primary">REST API</span>
+          </div>
+        </div>
+
+        <div class="project-links d-flex gap-4">
+          <a href="https://coruscating-starship-4984d8.netlify.app" target="_blank" class="btn btn-outline-primary">
+            <i class="fas fa-laptop me-2"></i> Live Frontend Demo
+          </a>
+          <a href="https://library-management-jf5a.onrender.com" target="_blank" class="btn btn-outline-secondary">
+            <i class="fas fa-server me-2"></i> Backend API
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-aos="fade-up">Contact</h2>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Feel free to get in touch!</p>
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishnudethanmv@gmail.com" 
+   target="_blank" 
+   class="btn btn-outline-primary px-4 py-2">
+  <i class="fas fa-envelope"></i> Email Me
+</a>
+
+      <div class="social-icons mt-5" data-aos="fade-up" data-aos-delay="300">
+  <a href="https://www.linkedin.com/in/vishnu-dethan-m-v-9918442b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+   target="_blank" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
+  
+  <a href="https://www.instagram.com/vishnu_dethan?igsh=MW91bXRuMWN3ajh6bQ=="
+   target="_blank" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
+</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 VISHNU DETHAN M V. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>
